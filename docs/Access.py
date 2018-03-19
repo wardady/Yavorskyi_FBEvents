@@ -18,7 +18,6 @@ def fb_events(place):
     url_data = urllib.parse.urlencode(data)
 
     events_id_list = []
-    count = 0
     while True:
         with urllib.request.urlopen(url_request + url_data) as response:
             fb_events = json.loads(response.read())
